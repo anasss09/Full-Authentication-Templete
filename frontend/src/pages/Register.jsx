@@ -13,11 +13,11 @@ const Register = () => {
 		dispatch(registerUser(form));
 	}
 	return (
-		<div>
-			<div>
-				<h2>Sign up</h2>
+		<div className="min-h-screen flex items-center justify-center bg-gray-100">
+			<div className="w-100 bg-white shadow-lg rounded">
+				<h2 className="text-2xl font-semibold mb-4 text-center">Sign up</h2>
 
-				<form onSubmit={HandleSignup}>
+				<form onSubmit={HandleSignup} className="mb-4">
 					<input
 						type="text"
 						value={form.fullName}
@@ -26,7 +26,7 @@ const Register = () => {
 							setForm({ ...form, fullName: ev.target.value })
 						}
 						required
-						className="focus:outline-none"
+						className="w-full border rounded mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
 					/>
 
 					<input
@@ -37,6 +37,7 @@ const Register = () => {
 							setForm({ ...form, email: ev.target.value })
 						}
 						required
+            className="w-full border rounded mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
 					/>
 
 					<input
@@ -47,11 +48,12 @@ const Register = () => {
 							setForm({ ...form, password: ev.target.value })
 						}
 						required
+            className="w-full border rounded mb-3 focus:outline-none focus:ring-2 focus:ring-blue-600"
 					/>
 
 					<button
 						type="submit"
-						className="bg-blue-600 px-6 py-1 rounded text-white text-center hover:bg-blue-700"
+						className="bg-blue-600 text-white text-center px-6 py-2 rounded hover:bg-blue-700 transition"
 					>
 						SignUp
 					</button>
